@@ -13,3 +13,7 @@ ld exit.o -o exit -L$(xcode-select -p)/SDKs/MacOSX.sdk/usr/lib -lSystem
 as local_var.s -o local_var.o
 ld local_var.o -o local_var -L$(xcode-select -p)/SDKs/MacOSX.sdk/usr/lib -lSystem
 
+
+## build dataTest
+as dataTest.s -o dataTest.o
+ld dataTest.o -o dataTest -L$(xcode-select -p)/SDKs/MacOSX.sdk/usr/lib -lSystem
