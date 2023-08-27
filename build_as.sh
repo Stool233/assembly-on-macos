@@ -25,3 +25,11 @@ ld jmpTest.o -o jmpTest -L$(xcode-select -p)/SDKs/MacOSX.sdk/usr/lib -lSystem
 ## build Fibonacci
 as Fibonacci.s -o Fibonacci.o
 ld Fibonacci.o -o Fibonacci -L$(xcode-select -p)/SDKs/MacOSX.sdk/usr/lib -lSystem
+
+## build test_syscall with debug
+as test_syscall.s -g -o test_syscall.o
+ld test_syscall.o -o test_syscall -L$(xcode-select -p)/SDKs/MacOSX.sdk/usr/lib -lSystem
+
+## build test_syscall_fault with debug
+as test_syscall_fault.s -g -o test_syscall_fault.o
+ld test_syscall_fault.o -o test_syscall_fault -L$(xcode-select -p)/SDKs/MacOSX.sdk/usr/lib -lSystem
