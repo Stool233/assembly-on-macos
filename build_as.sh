@@ -33,3 +33,9 @@ ld test_syscall.o -o test_syscall -L$(xcode-select -p)/SDKs/MacOSX.sdk/usr/lib -
 ## build test_syscall_fault with debug
 as test_syscall_fault.s -g -o test_syscall_fault.o
 ld test_syscall_fault.o -o test_syscall_fault -L$(xcode-select -p)/SDKs/MacOSX.sdk/usr/lib -lSystem
+
+
+## build test_ld
+as test_ld.s -o test_ld.o
+as test_ld_tmp -o test_ld_tmp.o
+ld test_ld.o test_ld_tmp.o -o test_ld -L$(xcode-select -p)/SDKs/MacOSX.sdk/usr/lib -lSystem
